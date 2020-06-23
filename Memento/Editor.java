@@ -1,0 +1,32 @@
+package com.codeWithArsalon.Memento;
+
+
+public class Editor {
+    private String content;
+
+    public EditorState createState(){
+        return new EditorState(content); //editor saves state in EditorState obj
+    }
+
+    public void restore (EditorState state){
+        content = state.getContent();
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+}
+
+
+
+
+
+
+
+
+
